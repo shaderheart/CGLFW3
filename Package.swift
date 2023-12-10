@@ -100,8 +100,7 @@ let package = Package(
                 .define("GLFW_EXPOSE_NATIVE_WIN32", .when(platforms: [.windows])),
                 .define("GLFW_EXPOSE_NATIVE_WGL", .when(platforms: [.windows])),
                 .define("_GLFW_WIN32", .when(platforms: [.windows])),
-                .define("GLFW_EXPOSE_NATIVE_X11", .when(platforms: [.linux])),
-                .define("_GLFW_X11", .when(platforms: [.linux])),
+                .define("GLFW_USE_WAYLAND", .when(platforms: [.linux])),
                 .define("_DEFAULT_SOURCE", .when(platforms: [.linux])),
                 .unsafeFlags(["-fno-objc-arc"])
             ],
